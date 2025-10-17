@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export function Hero() {
   return (
@@ -29,6 +30,18 @@ export function Hero() {
             Trainingspläne von Echtwork
           </span>
         </h1>
+
+        <p className="mx-auto mb-8 max-w-2xl text-pretty text-lg leading-relaxed text-gray-300 md:text-xl">
+          Schließe dich über <span className="font-bold text-yellow-500">500+ zufriedenen Kunden</span> an, die ihre
+          Fitnessziele erreicht haben
+        </p>
+
+        <Link
+          href="#plaene"
+          className="inline-block rounded-lg bg-yellow-500 px-8 py-4 text-lg font-bold text-black transition-all hover:bg-yellow-400 hover:scale-105 hover:shadow-xl"
+        >
+          Jetzt Plan wählen →
+        </Link>
       </div>
     </section>
   )

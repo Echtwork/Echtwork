@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
+import { Zap } from "lucide-react"
 
 interface PlanCardProps {
   title: string
@@ -27,6 +28,13 @@ export function PlanCard({ title, price, features, bonus, hostedButtonId, checkb
 
   return (
     <article className="group flex flex-col rounded-2xl border border-gray-700 bg-gray-900 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-yellow-500/50 hover:shadow-xl hover:shadow-yellow-500/10">
+      {bonus && (
+        <div className="mb-4 flex items-center gap-2 rounded-lg bg-yellow-500/10 px-3 py-2 text-sm font-bold text-yellow-500">
+          <Zap className="h-4 w-4" />
+          <span>Limitiertes Angebot!</span>
+        </div>
+      )}
+
       <h3 className="mb-4 text-balance text-xl font-bold text-yellow-500">{title}</h3>
 
       <ul className="mb-6 space-y-3 text-gray-300">
@@ -83,6 +91,7 @@ export function PlanCard({ title, price, features, bonus, hostedButtonId, checkb
           <div className="text-4xl font-bold text-yellow-500" aria-label={`Preis: ${price}`}>
             {price}
           </div>
+          <div className="mt-2 text-xs text-gray-400">14 Tage Geld-zurück-Garantie</div>
         </div>
 
         <div className="mb-4 flex items-start rounded-lg border border-gray-700 bg-black/30 p-3">
