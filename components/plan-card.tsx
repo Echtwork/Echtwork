@@ -91,7 +91,7 @@ export function PlanCard({ title, price, features, bonus, hostedButtonId, checkb
           <div className="text-4xl font-bold text-yellow-500" aria-label={`Preis: ${price}`}>
             {price}
           </div>
-          <div className="mt-2 text-xs text-gray-400">14 Tage Geld-zurück-Garantie</div>
+          {/* Removed "14 Tage Geld-zurück-Garantie" */}
         </div>
 
         <div className="mb-4 flex items-start rounded-lg border border-gray-700 bg-black/30 p-3">
